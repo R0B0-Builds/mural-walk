@@ -1,0 +1,91 @@
+{
+  "murals": [
+    {
+      "id": 1,
+      "name": "James Jetlag, Yasja Ligteijn",
+      "description": "Een grote, opvallende muurschildering die verschillende figuren en stijlen combineert. Je ziet onder andere een krijger met speer, een vrouw met dreadlocks, en verschillende fantasierijke elementen in felle kleuren. Het kunstwerk laat verschillende invloeden zien en creëert een levendig straatbeeld.",
+      "artist": "James Jetlag, Yasja Ligteijn",
+      "year": 2021,
+      "location": {
+        "address": "Geleenstraat 9, 6411 HP Heerlen, Nederland",
+        "coordinates": {
+          "lat": 50.8875,
+          "lng": 5.9833
+        }
+      },
+      "image": "img/murals/james-jetlag-yasja-ligteijn.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Koolpiet - forward in time",
+      "description": "Dit kunstwerk heeft een link met de mijnbouwgeschiedenis van Heerlen. Het toont een kleurrijk vogeltje als symbool voor de kanaries die mijnwerkers vroeger meenamen om gevaarlijke gassen te detecteren. De mural won in 2016 een belangrijke Nederlandse street art prijs.",
+      "artist": "Collin van der Sluijs, Super A",
+      "year": 2013,
+      "location": {
+        "address": "Heerlen, Nederland",
+        "coordinates": {
+          "lat": 50.8833,
+          "lng": 5.9833
+        }
+      },
+      "image": "img/murals/koolpiet-forward-in-time.jpg",
+      "awards": ["Wonderwall award 2016 - Dutch Street Art Awards"]
+    },
+    {
+      "id": 3,
+      "name": "A Miracle Elixir",
+      "description": "Een hyperrealistische muurschildering gemaakt door Case Maclaim, die bekendstaat om zijn fotorealistische technieken. Case is onderdeel van het internationale kunstenaarscollectief Maclaim Crew en werkt ook als restaurateur van klassieke schilderijen voor musea.",
+      "artist": "Case Maclaim",
+      "year": 2022,
+      "location": {
+        "address": "Kruisstraat, Heerlen, Nederland",
+        "coordinates": {
+          "lat": 50.8875,
+          "lng": 5.9800
+        }
+      },
+      "image": "img/murals/a-miracle-elixir.jpg"
+    },
+    {
+      "id": 4,
+      "name": "A Crazy little thing called Glove",
+      "description": "Een surrealistische muurschildering van kunstenaarsduo Telmo Miel. Het werk speelt met verschillende lagen en perspectieven, waardoor een dromerige en intrigerende compositie ontstaat. Deze mural is onderdeel van hun 'Glove Stories' serie.",
+      "artist": "Telmo Miel",
+      "year": 2015,
+      "location": {
+        "address": "Bekkerweg 13, Heerlen, Nederland",
+        "coordinates": {
+          "lat": 50.8850,
+          "lng": 5.9750
+        }
+      },
+      "image": "img/murals/a-crazy-little-thing-called-glove.jpg"
+    }
+  ],
+  "recommended_route": [
+    {
+      "order": 1,
+      "mural_id": 2,
+      "instructions": "Begin je tour bij de Koolpiet mural. Dit kunstwerk vertelt het verhaal van Heerlen's mijnbouwverleden.",
+      "walking_time_to_next": 8
+    },
+    {
+      "order": 2,
+      "mural_id": 1,
+      "instructions": "Loop naar de Geleenstraat voor de kleurrijke muurschildering van James Jetlag en Yasja Ligteijn.",
+      "walking_time_to_next": 6
+    },
+    {
+      "order": 3,
+      "mural_id": 3,
+      "instructions": "Vervolg je route naar de Kruisstraat om Case Maclaim's fotorealistische kunstwerk te bewonderen.",
+      "walking_time_to_next": 10
+    },
+    {
+      "order": 4,
+      "mural_id": 4,
+      "instructions": "Eindig je tour bij de surrealistische muurschildering van Telmo Miel aan de Bekkerweg.",
+      "walking_time_to_next": null
+    }
+  ]
+}
