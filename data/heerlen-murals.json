@@ -1,7 +1,9 @@
 {
   "startLocation": {
-    "name": "Bernardinus College",
-    "address": "Akerstraat 95, Heerlen",
+    "name": "Start locatie",
+    "address": "Bernardinus College",
+    "description": "Start locatie voor de mural walk",
+    "thumbnail": "img/bernardinus.png",
     "coordinates": {
       "lat": 50.882036,
       "lng": 5.984278
@@ -35,8 +37,8 @@
       "location": {
         "address": "Akerstraat 88, Heerlen",
         "coordinates": {
-          "lat": 50.881745,
-          "lng": 5.984567
+          "lat": 50.886985,
+          "lng": 5.976659
         }
       }
     },
@@ -51,8 +53,8 @@
       "location": {
         "address": "Willemstraat 47, Heerlen",
         "coordinates": {
-          "lat": 50.882856,
-          "lng": 5.983567
+          "lat": 50.884442, 
+          "lng": 5.976735
         }
       }
     },
@@ -67,8 +69,8 @@
       "location": {
         "address": "Valkenburgerweg 143, Heerlen",
         "coordinates": {
-          "lat": 50.883567,
-          "lng": 5.985123
+          "lat": 50.882725, 
+          "lng": 5.979478
         }
       }
     }
