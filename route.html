@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrije Route - Mural Walk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map {
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: #3ea2dd;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 0 #5d17eb;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .back-button:hover {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #5d17eb;
+        }
+        .back-button img {
+            width: 30px;
+            height: 30px;
+            transform: rotate(180deg);
+        }
+        .leaflet-popup-content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <img src="img/icons/pijltje-2.png" alt="Terug">
+    </button>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize map centered on Bernardinus College
+        const map = L.map('map', {
+            zoomControl: false
+        }).setView([50.8818, 5.9789], 17);
+
+        // Add zoom control to bottom right
+        L.control.zoom({
+            position: 'bottomright'
+        }).addTo(map);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: ' OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add marker for Bernardinus College
+        const marker = L.marker([50.8818, 5.9789], {
+            icon: L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            })
+        }).addTo(map);
+
+        marker.bindPopup("<b>Bernardinus College</b><br>Akerstraat 95, Heerlen");
+    </script>
+</body>
+</html>
