@@ -1,7 +1,9 @@
 {
   "startLocation": {
-    "name": "Bernardinus College",
-    "address": "Akerstraat 95, Heerlen",
+    "name": "Start locatie",
+    "address": "Bernardinus College",
+    "description": "Start locatie voor de mural walk",
+    "thumbnail": "img/bernardinus.png",
     "coordinates": {
       "lat": 50.882036,
       "lng": 5.984278
@@ -9,15 +11,15 @@
   },
   "murals": [
     {
-        "id": "mural1",
-        "title": "Heerlen Murals",
+        "id": "mural0",
+        "title": "Quatro Cinema",
         "artist": "James Jetlag, Yasja Ligteijn",
-        "year": 2019,
-        "description": "Een kleurrijke muurschildering die de diversiteit van Heerlen vertegenwoordigt",
-        "image": "img/murals/heerlen-murals-1.jpg",
-        "thumbnail": "img/murals/thumbnails/heerlen-murals-1.jpg",
+        "year": 2020,
+        "description": "In navolging van de mural van PichiAvo in 2018 is in oktober 2020 de zijgevel van Quatro Cinema voorzien van deze mural...",
+        "image": "img/murals/james-jetlag-yasja-ligteijn.jpg",
+        "thumbnail": "img/murals/thumbnails/james-jetlag-yasja-ligteijn.jpg",
         "location": {
-          "address": "Akerstraat 88, Heerlen",
+          "address": "Geleenstraat 9, Heerlen",
           "coordinates": {
             "lat": 50.887187,
             "lng": 5.978657
@@ -26,49 +28,49 @@
       },
     {
       "id": "mural1",
-      "title": "Heerlen Murals",
+      "title": "Koolpiet",
       "artist": "Collin van der Sluijs",
-      "year": 2019,
-      "description": "Een kleurrijke muurschildering die de diversiteit van Heerlen vertegenwoordigt",
-      "image": "img/murals/heerlen-murals-1.jpg",
-      "thumbnail": "img/murals/thumbnails/heerlen-murals-1.jpg",
+      "year": 2013,
+      "description": "Heerlen is het centrum van de voormalige Oostelijke Mijnstreek waar de kolenindustrie voor welvaart zorgde...",
+      "image": "img/murals/a-crazy-little-thing-called-glove.jpg",
+      "thumbnail": "img/murals/thumbnails/a-crazy-little-thing-called-glove.jpg",
       "location": {
-        "address": "Akerstraat 88, Heerlen",
+        "address": "Honigmannstraat 2A, Heerlen",
         "coordinates": {
-          "lat": 50.881745,
-          "lng": 5.984567
+          "lat": 50.886985,
+          "lng": 5.976659
         }
       }
     },
     {
       "id": "mural2",
-      "title": "Urban Culture",
-      "artist": "Studio Giftig",
-      "year": 2020,
-      "description": "Een hyperrealistische muurschildering die de stedelijke cultuur van Heerlen viert",
-      "image": "img/murals/urban-culture.jpg",
-      "thumbnail": "img/murals/thumbnails/urban-culture.jpg",
+      "title": "A Miracle Elixer",
+      "artist": "Case Maclaim",
+      "year": 2014,
+      "description": "Case is een van de vier leden van de Maclaim Crew. Ze staan erom bekend de pioniers te zijn van fotorealistische werken met spuitbussen en hebben zodoende wereldwijd een trend gezet...",
+      "image": "img/murals/a-miracle-elixir.jpg",
+      "thumbnail": "img/murals/thumbnails/a-miracle-elixir.jpg",
       "location": {
-        "address": "Willemstraat 47, Heerlen",
+        "address": "Kruisstraat 51, Heerlen",
         "coordinates": {
-          "lat": 50.882856,
-          "lng": 5.983567
+          "lat": 50.884442, 
+          "lng": 5.976735
         }
       }
     },
     {
       "id": "mural3",
-      "title": "Mining History",
-      "artist": "Rosco Artworks",
-      "year": 2018,
-      "description": "Een eerbetoon aan het mijnbouwverleden van Heerlen",
-      "image": "img/murals/mining-history.jpg",
-      "thumbnail": "img/murals/thumbnails/mining-history.jpg",
+      "title": "A Crazy little thing called Glove",
+      "artist": "TelmoMiel",
+      "year": 2015,
+      "description": "In hun werk onderzoeken Telmo en Miel de verschillende aspecten van het vertellen van verhalen, maar focussen op slechts één onderwerp...",
+      "image": "img/murals/koolpiet-forward-in-time.jpg",
+      "thumbnail": "img/murals/thumbnails/koolpiet-forward-in-time.jpg",
       "location": {
-        "address": "Valkenburgerweg 143, Heerlen",
+        "address": "Bekkerweg 13, Heerlen",
         "coordinates": {
-          "lat": 50.883567,
-          "lng": 5.985123
+          "lat": 50.882725, 
+          "lng": 5.979478
         }
       }
     }

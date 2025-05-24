@@ -1,4 +1,25 @@
-/* General styles */
+/* CSS Custom Properties */
+:root {
+    --primary-color: #3ea2dd;
+    --secondary-color: #5d17eb;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-white: #ffffff;
+    --font-family: 'Segoe UI', Arial, sans-serif;
+    --border-radius: 8px;
+    --border-radius-small: 4px;
+    --border-radius-medium: 6px;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --shadow-primary: 0 4px 0 var(--secondary-color);
+    --shadow-hover: 0 2px 0 var(--secondary-color);
+    --shadow-small: 0 2px 0 var(--secondary-color);
+    --shadow-small-hover: 0 1px 0 var(--secondary-color);
+    --transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Reset & Base Styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,17 +27,13 @@ html, body {
     height: 100%;
 }
 
-/* Page styling */
-.ui-page {
+.ui-pagina,
+.ui-inhoud {
     background: transparent;
 }
 
-.ui-content {
-    background: transparent;
-}
-
-/* Background styling */
-.background-container {
+/* Layout Components */
+.achtergrond-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -31,157 +48,196 @@ html, body {
     z-index: -1;
 }
 
-/* Content container */
-.content {
+.inhoud {
     position: relative;
     z-index: 1;
     width: 100%;
     min-height: 100vh;
 }
 
-/* Logo styling */
+/* Logo */
 .logo {
     display: block;
     max-width: 400px;
-    margin: 2rem auto;
-    padding-top: 2rem;
+    margin: var(--spacing-large) auto;
+    padding-top: var(--spacing-large);
 }
 
-/* Button styling */
-.button-container {
+/* Button Components */
+.knop-container {
     width: 100%;
     max-width: 300px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: var(--spacing-large) auto;
+    padding: 0 var(--spacing-medium);
 }
 
-.custom-button {
+.aangepaste-knop {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #3ea2dd;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-family: var(--font-family);
     text-decoration: none;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 0 #5d17eb;
-    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 1.2rem 1.8rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-primary);
+    transition: var(--transition);
+    min-height: 60px;
+    cursor: pointer;
+    border: none;
 }
 
-.custom-button:hover {
+.aangepaste-knop:hover {
     transform: translateY(2px);
-    box-shadow: 0 2px 0 #5d17eb;
+    box-shadow: var(--shadow-hover);
 }
 
-.button-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: none;
+.knop-tekst {
+    font-family: var(--font-family);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
 }
 
-.button-icon {
+.knop-icoon {
     height: 40px;
     width: auto;
-    margin-left: 1rem;
+    margin-left: var(--spacing-medium);
 }
 
-/* Route page styles */
-#map {
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-}
-
-.back-button {
+/* Back Button */
+.terug-knop {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1000;
-    background-color: #3ea2dd;
+    background-color: var(--primary-color);
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     padding: 10px;
-    box-shadow: 0 4px 0 #5d17eb;
+    box-shadow: var(--shadow-primary);
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: var(--transition);
 }
 
-.back-button:hover {
+.terug-knop:hover {
     transform: translateY(2px);
-    box-shadow: 0 2px 0 #5d17eb;
+    box-shadow: var(--shadow-hover);
 }
 
-.back-button img {
+.terug-knop img {
     width: 30px;
     height: 30px;
     transform: rotate(180deg);
 }
 
+/* Map Styles */
+#kaart {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+/* Popup Components */
 .leaflet-popup-content {
     text-align: center;
     min-width: 200px;
 }
 
+.leaflet-container a
+color: var(--text-white);
+
+/* Shared Popup Styles */
+.muurschildering-popup,
+.mural-popup {
+    font-family: var(--font-family);
+}
+
+.muurschildering-popup img,
+.mural-popup img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius-small);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.muurschildering-popup h3,
+.mural-popup h3 {
+    margin: var(--spacing-small) 0;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+}
+
+.muurschildering-popup p,
+.mural-popup p {
+    margin: var(--spacing-small) 0;
+    color: var(--text-secondary);
+    font-family: var(--font-family);
+}
+
+/* Muurschildering Popup Specific */
+.muurschildering-popup img {
+    max-width: 300px;
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Mural Popup Specific */
 .mural-popup {
     padding: 10px;
 }
 
 .mural-popup img {
-    width: 100%;
     max-width: 180px;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 4px;
 }
 
 .mural-popup h3 {
-    margin: 5px 0;
-    color: #333;
     font-size: 16px;
+    margin: 5px 0;
 }
 
 .mural-popup p {
-    margin: 5px 0;
-    color: #666;
     font-size: 14px;
+    margin: 5px 0;
 }
 
-.mural-popup .custom-button {
+.mural-popup .aangepaste-knop {
     display: inline-flex;
     align-items: center;
-    background-color: #3ea2dd;
-    color: white;
-    text-decoration: none;
     padding: 8px 15px;
-    border-radius: 6px;
+    border-radius: var(--border-radius-medium);
     margin-top: 10px;
-    box-shadow: 0 2px 0 #5d17eb;
-    transition: transform 0.2s, box-shadow 0.2s;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    box-shadow: var(--shadow-small);
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.5px;
+    min-height: auto;
+    justify-content: center;
 }
 
-.mural-popup .custom-button:hover {
+.mural-popup .aangepaste-knop:hover {
     transform: translateY(1px);
-    box-shadow: 0 1px 0 #5d17eb;
+    box-shadow: var(--shadow-small-hover);
 }
 
-.mural-popup .button-icon {
+.mural-popup .knop-icoon {
     width: 20px;
     height: 20px;
     margin-left: 8px;
 }
 
-/* Footer styling */
+/* Footer */
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 1rem;
+    padding: var(--spacing-medium);
     text-align: center;
     z-index: 2;
 }
