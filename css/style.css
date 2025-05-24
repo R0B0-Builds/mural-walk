@@ -82,6 +82,7 @@ html, body {
     justify-content: space-between;
     background-color: var(--primary-color);
     color: var(--text-white);
+    font-family: var(--font-family);
     text-decoration: none;
     padding: 1.2rem 1.8rem;
     border-radius: var(--border-radius);
@@ -98,6 +99,7 @@ html, body {
 }
 
 .knop-tekst {
+    font-family: var(--font-family);
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--text-white);
@@ -159,6 +161,9 @@ html, body {
 }
 
 /* Gedeelde popup stijlen */
+.mural-popup {
+    font-family: var(--font-family);
+}
 
 .mural-popup img {
     width: 100%;
@@ -173,12 +178,14 @@ html, body {
 .mural-popup h3 {
     margin: var(--spacing-small) 0;
     color: var(--text-primary);
+    font-family: var(--font-family);
     font-size: 1.2rem;
 }
 
 .mural-popup p {
     margin: var(--spacing-small) 0;
     color: var(--text-secondary);
+    font-family: var(--font-family);
     font-size: 0.9rem;
     line-height: 1.4;
 }
@@ -187,6 +194,45 @@ html, body {
 .mural-popup img {
     max-width: 300px;
     margin-bottom: var(--spacing-medium);
+}
+
+.mural-popup .aangepaste-knop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-family: var(--font-family);
+    text-decoration: none;
+    padding: 1.2rem 1.8rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-primary);
+    transition: var(--transition);
+    min-height: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.mural-popup .aangepaste-knop:hover {
+    transform: translateY(2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.mural-popup .knop-tekst {
+    font-family: var(--font-family);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    margin-right: var(--spacing-medium);
+}
+
+.mural-popup .knop-icoon {
+    height: 30px;
+    width: auto;
+    display: flex;
+    align-items: center;
 }
 
 /* Footer */

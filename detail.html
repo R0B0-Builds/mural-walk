@@ -8,42 +8,32 @@
     <!-- jQuery eerst laden -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
-    <!-- jQuery Mobile CSS -->
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    
     <!-- Mijn eigen CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div data-role="page" id="detail">
-        <div class="achtergrond-container"></div>
-        
-        <div data-role="header">
-            <a href="route.html" data-transition="slide" data-direction="reverse" class="terug-knop ui-btn ui-icon-arrow-l ui-btn-icon-left">
-                <img src="img/icons/pijltje-2.png" alt="Terug naar kaart">
-            </a>
-        </div>
-        
-        <div data-role="content" class="detail-container">
-            <div class="mural-detail ui-content">
-                <img id="mural-image" src="" alt="Mural foto" class="mural-full-image">
-                <img id="mural-image2" src="" alt="Extra mural foto" class="mural-full-image secondary">
-                <div class="mural-info">
-                    <h1 id="mural-title"></h1>
-                    <p id="mural-artist"></p>
-                    <p id="mural-address"></p>
-                    <p id="mural-description"></p>
-                </div>
+    <div class="achtergrond-container"></div>
+    
+    <button class="terug-knop" onclick="window.location.href='route.html'">
+        <img src="img/icons/pijltje-2.png" alt="Terug naar kaart">
+    </button>
+    
+    <div class="detail-container">
+        <div class="mural-detail">
+            <img id="mural-image" src="" alt="Mural foto" class="mural-full-image">
+            <img id="mural-image2" src="" alt="Extra mural foto" class="mural-full-image secondary">
+            <div class="mural-info">
+                <h1 id="mural-title"></h1>
+                <p id="mural-artist"></p>
+                <p id="mural-address"></p>
+                <p id="mural-description"></p>
             </div>
         </div>
-
-        <footer data-role="footer" class="footer">
-        </footer>
     </div>
 
-    <!-- jQuery Mobile JS -->
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    
+    <footer class="footer">
+    </footer>
+
     <!-- Mijn eigen scripts -->
     <script src="js/detail.js"></script>
     <script src="js/transitions.js"></script>
