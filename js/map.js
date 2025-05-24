@@ -175,7 +175,7 @@ fetch('./data/heerlen-murals.json')
                     <p>${mural.artist}, ${mural.year}</p>
                     <p>${mural.description}</p>
                     <a href="detail.html?id=${mural.id}" class="aangepaste-knop">
-                        <span>Meer info</span>
+                        <span class="knop-tekst">Meer info</span>
                         <img src="img/icons/pijltje-2.png" class="knop-icoon" alt="Pijl icoon">
                     </a>
                 </div>
