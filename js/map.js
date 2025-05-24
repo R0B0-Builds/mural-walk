@@ -172,11 +172,8 @@ fetch('./data/heerlen-murals.json')
                 <div class="mural-popup">
                     <img src="${mural.thumbnail}" alt="Afbeelding van ${mural.title}">
                     <h3>${mural.title}</h3>
-                    <p>${mural.artist}, ${mural.year}</p>
-                    <p>${mural.description}</p>
                     <a href="detail.html?id=${mural.id}" class="aangepaste-knop">
                         <span class="knop-tekst">Meer info</span>
-                        <img src="img/icons/pijltje-2.png" class="knop-icoon" alt="Pijl icoon">
                     </a>
                 </div>
             `;

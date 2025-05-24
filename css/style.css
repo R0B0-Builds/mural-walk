@@ -239,24 +239,21 @@ html, body {
 
 /* Gedeelde popup stijlen */
 .mural-popup {
-    font-family: var(--font-family);
+    text-align: center;
+    padding: 5px;
 }
 
 .mural-popup img {
-    width: 100%;
+    width: 200px;
     height: auto;
-    margin-bottom: 10px;
-    border-radius: var(--border-radius-small);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .mural-popup h3 {
-    margin: var(--spacing-small) 0;
-    color: var(--text-primary);
-    font-family: var(--font-family);
-    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: black;
 }
 
 .mural-popup p {
@@ -268,48 +265,26 @@ html, body {
 }
 
 /* Mural Popup Specific */
-.mural-popup img {
-    max-width: 300px;
-    margin-bottom: var(--spacing-medium);
-}
-
 .mural-popup .aangepaste-knop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    color: var(--text-white);
-    font-family: var(--font-family);
+    display: block;
+    width: 120px;
+    height: 25px;
+    background-color: #3ea2dd;
+    color: white;
     text-decoration: none;
-    padding: 1.2rem 1.8rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-primary);
-    transition: var(--transition);
-    min-height: 30px;
-    cursor: pointer;
-    border: none;
+    border-radius: 5px;
+    margin: 5px auto 0;
+    text-align: center;
+    line-height: 20px;
 }
 
 .mural-popup .aangepaste-knop:hover {
-    transform: translateY(2px);
-    box-shadow: var(--shadow-hover);
+    background-color: #2d8bc0;
 }
 
 .mural-popup .knop-tekst {
-    font-family: var(--font-family);
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--text-white);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    letter-spacing: 0.5px;
-    margin-right: var(--spacing-medium);
-}
-
-.mural-popup .knop-icoon {
-    height: 30px;
-    width: auto;
-    display: flex;
-    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 /* Footer */
