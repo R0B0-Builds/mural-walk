@@ -147,8 +147,9 @@ html, body {
     min-width: 200px;
 }
 
-.leaflet-container a
-color: var(--text-white);
+.leaflet-container a {
+    color: var(--text-white);
+}
 
 /* Shared Popup Styles */
 .muurschildering-popup,
