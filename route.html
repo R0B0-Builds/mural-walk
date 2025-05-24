@@ -8,17 +8,29 @@
     <!-- jQuery eerst laden -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    
     <!-- Mijn eigen CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Kaart CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-    <button class="terug-knop" onclick="window.location.href='index.html'">
-        <img src="img/icons/pijltje-2.png" alt="Terug naar start">
-    </button>
-    <div id="kaart"></div>
+    <div data-role="page" id="route">
+        <div data-role="header">
+            <a href="index.html" data-transition="slide" data-direction="reverse" class="terug-knop ui-btn ui-icon-arrow-l ui-btn-icon-left">
+                <img src="img/icons/pijltje-2.png" alt="Terug naar start">
+            </a>
+        </div>
+        <div data-role="content">
+            <div id="kaart"></div>
+        </div>
+    </div>
 
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
     <!-- Kaart scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/map.js"></script>
