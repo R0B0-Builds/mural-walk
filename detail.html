@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mural Details - Ontdek het Verhaal</title>
+    <title>Mural Walk - Detail</title>
     
-    <!-- jQuery eerst laden -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     
     <!-- Mijn eigen CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="achtergrond-container"></div>
-    
-    <button class="terug-knop" onclick="window.location.href='route.html'">
-        <img src="img/icons/pijltje-2.png" alt="Terug naar kaart">
-    </button>
-    
-    <div class="detail-container">
-        <div class="mural-detail">
-            <img id="mural-image" src="" alt="Mural foto" class="mural-full-image">
-            <img id="mural-image2" src="" alt="Extra mural foto" class="mural-full-image secondary">
-            <div class="mural-info">
-                <h1 id="mural-title"></h1>
-                <p id="mural-artist"></p>
-                <p id="mural-address"></p>
-                <p id="mural-description"></p>
+    <div data-role="page" id="detail">
+        <div class="achtergrond-container"></div>
+        
+        <button onclick="window.location.href='route.html'" class="terug-knop">
+            <img src="img/icons/pijltje-2.png" alt="Terug" class="pijltje">
+        </button>
+
+        <div data-role="content" class="detail-container">
+            <div class="mural-detail">
+                <img id="mural-image" src="" alt="Mural" class="mural-full-image">
+                <img id="mural-image2" src="" alt="Mural Detail" class="mural-full-image secondary">
+                <div class="mural-info">
+                    <h1 id="mural-title"></h1>
+                    <p id="mural-artist"></p>
+                    <p id="mural-address"></p>
+                    <p id="mural-description"></p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <footer class="footer">
-    </footer>
 
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
     <!-- Mijn eigen scripts -->
     <script src="js/detail.js"></script>
     <script src="js/transitions.js"></script>

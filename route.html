@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ontdek de Murals - Mural Walk</title>
+    <title>Mural Walk - Route</title>
     
-    <!-- jQuery eerst laden -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     
     <!-- Mijn eigen CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -14,11 +14,25 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-    <button class="terug-knop" onclick="window.location.href='index.html'">
-        <img src="img/icons/pijltje-2.png" alt="Terug naar start">
-    </button>
-    <div id="kaart"></div>
+    <div data-role="page" id="route">
+        <div class="achtergrond-container"></div>
+        
+        <button onclick="window.location.href='index.html'" class="terug-knop">
+            <img src="img/icons/pijltje-2.png" alt="Terug" class="pijltje">
+        </button>
 
+        <div data-role="content">
+            <div id="kaart"></div>
+        </div>
+
+        <footer data-role="footer" class="footer">
+            <img src="img/stijnstorm.png" alt="Stijn Storm" class="footer-logo">
+        </footer>
+    </div>
+
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
     <!-- Kaart scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/map.js"></script>

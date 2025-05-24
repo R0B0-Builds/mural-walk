@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heerlen Murals Tour - Ontdek de Street Art</title>
+    <title>Mural Walk - Ontdek het Verhaal</title>
     
-    <!-- jQuery eerst laden -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     
     <!-- Mijn eigen CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="achtergrond-container"></div>
-    <div class="inhoud">
-        <img src="img/logo.png" alt="Heerlen Murals Logo" class="logo">
-        <div class="knop-container">
-            <a href="route.html" class="aangepaste-knop">
-                <span class="knop-tekst">Start je tour!</span>
-                <img src="img/icons/pijltje-2.png" alt="Pijl" class="knop-icoon">
-            </a>
+    <div data-role="page" id="home">
+        <div class="achtergrond-container"></div>
+        <div data-role="content" class="inhoud">
+            <img src="img/logo.png" alt="Mural Walk Logo" class="logo">
+            
+            <div class="knop-container">
+                <a href="route.html" data-transition="slide" class="aangepaste-knop">
+                    <span class="knop-tekst">Start de wandeling</span>
+                    <span class="knop-icoon">
+                        <img src="img/icons/pijltje-2.png" alt="Start" class="pijltje">
+                    </span>
+                </a>
+            </div>
         </div>
+
+        <footer data-role="footer" class="footer">
+            <img src="img/stijnstorm.png" alt="Stijn Storm" class="footer-logo">
+        </footer>
     </div>
-    <footer class="footer">
-        <img src="img/stijnstorm.png" alt="Stijn Storm" class="footer-logo">
-    </footer>
+
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+    <!-- Mijn eigen scripts -->
     <script src="js/transitions.js"></script>
 </body>
 </html>

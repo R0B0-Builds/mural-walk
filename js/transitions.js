@@ -57,4 +57,23 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.opacity = '1';
         }, 100);
     });
+});
+
+// Wacht tot de pagina geladen is
+$(document).on('pagecreate', function() {
+    // Voeg transitie effect toe aan alle links
+    $('a[data-transition]').on('click', function(e) {
+        // Controleer of het een interne link is
+        if (this.href.match(/\.(jpg|jpeg|png|gif)$/i) || this.href.startsWith('http')) {
+            return; // Laat externe links en afbeeldingen normaal werken
+        }
+
+        e.preventDefault(); // Voorkom standaard link gedrag
+        
+        // Gebruik jQuery Mobile's transitie
+        $.mobile.changePage(this.href, {
+            transition: $(this).data('transition'),
+            reverse: false
+        });
+    });
 }); 

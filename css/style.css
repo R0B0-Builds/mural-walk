@@ -57,25 +57,73 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 5vh;
 }
 
 /* Logo */
 .logo {
     display: block;
     max-width: 400px;
-    margin: var(--spacing-large) auto;
-    padding-top: var(--spacing-large);
+    margin: 0 auto;
+    padding-top: 15vh;
 }
 
 /* Knoppen */
 .knop-container {
     width: 100%;
     max-width: 300px;
-    margin: var(--spacing-large) auto;
+    margin: 10vh auto;
     padding: 0 var(--spacing-medium);
 }
 
+/* Navigatie icons */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-icon::before,
+.nav-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--text-white);
+    width: 2px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.nav-icon::before {
+    transform: rotate(45deg);
+    top: 2px;
+    left: 8px;
+}
+
+.nav-icon::after {
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 8px;
+}
+
+.nav-icon.back::before {
+    transform: rotate(-45deg);
+}
+
+.nav-icon.back::after {
+    transform: rotate(45deg);
+}
+
+.nav-icon.forward::before {
+    transform: rotate(45deg);
+}
+
+.nav-icon.forward::after {
+    transform: rotate(-45deg);
+}
+
+/* Update de bestaande knoppen */
 .aangepaste-knop {
     display: flex;
     align-items: center;
@@ -109,10 +157,16 @@ html, body {
 }
 
 .knop-icoon {
-    height: 30px;
-    width: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+/* Pijltje icoontjes */
+.pijltje {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Maakt het pijltje wit */
 }
 
 /* Terug knop */
@@ -120,14 +174,19 @@ html, body {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 1000;
+    z-index: 9999;
     background-color: var(--primary-color);
     border: none;
     border-radius: var(--border-radius);
-    padding: 10px;
+    padding: 12px;
     box-shadow: var(--shadow-primary);
     cursor: pointer;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
 }
 
 .terug-knop:hover {
@@ -135,10 +194,28 @@ html, body {
     box-shadow: var(--shadow-hover);
 }
 
-.terug-knop img {
-    width: 30px;
-    height: 30px;
-    transform: rotate(180deg);
+.terug-knop .pijltje {
+    transform: rotate(180deg); /* Draait het pijltje om voor de terug-knop */
+}
+
+/* Knop icoon */
+.knop-icoon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.knop-icoon .nav-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.knop-icoon .nav-icon::before,
+.knop-icoon .nav-icon::after {
+    background-color: var(--text-white);
+    width: 2px;
+    height: 10px;
+    border-radius: 2px;
 }
 
 /* Kaart */
@@ -297,4 +374,19 @@ html, body {
     color: var(--primary-color);
     font-weight: 500;
     font-size: 1.2rem;
+}
+
+/* jQuery Mobile overrides */
+.ui-page {
+    background: transparent !important;
+}
+
+.ui-content {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.ui-footer {
+    background: transparent !important;
+    border: none !important;
 }
