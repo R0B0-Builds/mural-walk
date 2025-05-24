@@ -1,0 +1,76 @@
+{
+  "startLocation": {
+    "name": "Bernardinus College",
+    "address": "Akerstraat 95, Heerlen",
+    "coordinates": {
+      "lat": 50.882036,
+      "lng": 5.984278
+    }
+  },
+  "murals": [
+    {
+        "id": "mural1",
+        "title": "Heerlen Murals",
+        "artist": "James Jetlag, Yasja Ligteijn",
+        "year": 2019,
+        "description": "Een kleurrijke muurschildering die de diversiteit van Heerlen vertegenwoordigt",
+        "image": "img/murals/heerlen-murals-1.jpg",
+        "thumbnail": "img/murals/thumbnails/heerlen-murals-1.jpg",
+        "location": {
+          "address": "Akerstraat 88, Heerlen",
+          "coordinates": {
+            "lat": 50.887187,
+            "lng": 5.978657
+          }
+        }
+      },
+    {
+      "id": "mural1",
+      "title": "Heerlen Murals",
+      "artist": "Collin van der Sluijs",
+      "year": 2019,
+      "description": "Een kleurrijke muurschildering die de diversiteit van Heerlen vertegenwoordigt",
+      "image": "img/murals/heerlen-murals-1.jpg",
+      "thumbnail": "img/murals/thumbnails/heerlen-murals-1.jpg",
+      "location": {
+        "address": "Akerstraat 88, Heerlen",
+        "coordinates": {
+          "lat": 50.881745,
+          "lng": 5.984567
+        }
+      }
+    },
+    {
+      "id": "mural2",
+      "title": "Urban Culture",
+      "artist": "Studio Giftig",
+      "year": 2020,
+      "description": "Een hyperrealistische muurschildering die de stedelijke cultuur van Heerlen viert",
+      "image": "img/murals/urban-culture.jpg",
+      "thumbnail": "img/murals/thumbnails/urban-culture.jpg",
+      "location": {
+        "address": "Willemstraat 47, Heerlen",
+        "coordinates": {
+          "lat": 50.882856,
+          "lng": 5.983567
+        }
+      }
+    },
+    {
+      "id": "mural3",
+      "title": "Mining History",
+      "artist": "Rosco Artworks",
+      "year": 2018,
+      "description": "Een eerbetoon aan het mijnbouwverleden van Heerlen",
+      "image": "img/murals/mining-history.jpg",
+      "thumbnail": "img/murals/thumbnails/mining-history.jpg",
+      "location": {
+        "address": "Valkenburgerweg 143, Heerlen",
+        "coordinates": {
+          "lat": 50.883567,
+          "lng": 5.985123
+        }
+      }
+    }
+  ]
+}
