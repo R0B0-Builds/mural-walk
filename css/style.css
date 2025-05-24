@@ -188,6 +188,10 @@ html, body {
     margin-bottom: var(--spacing-medium);
 }
 
+.muurschildering-popup .knop-icoon {
+    height: 24px;
+}
+
 /* Mural Popup Specific */
 .mural-popup {
     padding: 10px;
