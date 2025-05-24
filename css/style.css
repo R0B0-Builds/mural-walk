@@ -1,4 +1,4 @@
-/* CSS Custom Properties */
+/* Mijn eigen variabelen */
 :root {
     --primary-color: #3ea2dd;
     --secondary-color: #5d17eb;
@@ -19,12 +19,13 @@
     --transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Reset & Base Styles */
+/* Basis stijlen */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: var(--font-family);
 }
 
 .ui-pagina,
@@ -32,7 +33,7 @@ html, body {
     background: transparent;
 }
 
-/* Layout Components */
+/* Achtergrond */
 .achtergrond-container {
     position: fixed;
     top: 0;
@@ -53,6 +54,10 @@ html, body {
     z-index: 1;
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Logo */
@@ -63,7 +68,7 @@ html, body {
     padding-top: var(--spacing-large);
 }
 
-/* Button Components */
+/* Knoppen */
 .knop-container {
     width: 100%;
     max-width: 300px;
@@ -100,15 +105,17 @@ html, body {
     color: var(--text-white);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     letter-spacing: 0.5px;
+    margin-right: var(--spacing-medium);
 }
 
 .knop-icoon {
-    height: 40px;
+    height: 30px;
     width: auto;
-    margin-left: var(--spacing-medium);
+    display: flex;
+    align-items: center;
 }
 
-/* Back Button */
+/* Terug knop */
 .terug-knop {
     position: fixed;
     top: 20px;
@@ -134,30 +141,30 @@ html, body {
     transform: rotate(180deg);
 }
 
-/* Map Styles */
+/* Kaart */
 #kaart {
     width: 100%;
     height: 100vh;
     z-index: 1;
 }
 
-/* Popup Components */
+/* Popup stijlen */
 .leaflet-popup-content {
     text-align: center;
     min-width: 200px;
+    padding: 15px;
+    border-radius: var(--border-radius);
 }
 
 .leaflet-container a {
     color: var(--text-white);
 }
 
-/* Shared Popup Styles */
-.muurschildering-popup,
+/* Gedeelde popup stijlen */
 .mural-popup {
     font-family: var(--font-family);
 }
 
-.muurschildering-popup img,
 .mural-popup img {
     width: 100%;
     height: auto;
@@ -168,80 +175,25 @@ html, body {
     margin-right: auto;
 }
 
-.muurschildering-popup h3,
 .mural-popup h3 {
     margin: var(--spacing-small) 0;
     color: var(--text-primary);
     font-family: var(--font-family);
+    font-size: 1.2rem;
 }
 
-.muurschildering-popup p,
 .mural-popup p {
     margin: var(--spacing-small) 0;
     color: var(--text-secondary);
     font-family: var(--font-family);
-}
-
-/* Muurschildering Popup Specific */
-.muurschildering-popup img {
-    max-width: 300px;
-    margin-bottom: var(--spacing-medium);
-}
-
-.muurschildering-popup .aangepaste-knop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    color: var(--text-white);
-    font-family: var(--font-family);
-    text-decoration: none;
-    padding: 1.2rem 1.8rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-primary);
-    transition: var(--transition);
-    min-height: 30px;
-    cursor: pointer;
-    border: none;
-}
-
-.muurschildering-popup .aangepaste-knop:hover {
-    transform: translateY(2px);
-    box-shadow: var(--shadow-hover);
-}
-
-.muurschildering-popup .knop-tekst {
-    font-family: var(--font-family);
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--text-white);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    letter-spacing: 0.5px;
-}
-
-.muurschildering-popup .knop-icoon {
-    height: 40px;
-    width: auto;
-    margin-left: var(--spacing-medium);
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 /* Mural Popup Specific */
-.mural-popup {
-    padding: 10px;
-}
-
 .mural-popup img {
-    max-width: 180px;
-}
-
-.mural-popup h3 {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-.mural-popup p {
-    font-size: 14px;
-    margin: 5px 0;
+    max-width: 300px;
+    margin-bottom: var(--spacing-medium);
 }
 
 .mural-popup .aangepaste-knop {
@@ -273,74 +225,76 @@ html, body {
     color: var(--text-white);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     letter-spacing: 0.5px;
+    margin-right: var(--spacing-medium);
 }
 
 .mural-popup .knop-icoon {
-    height: 40px;
+    height: 30px;
     width: auto;
-    margin-left: var(--spacing-medium);
+    display: flex;
+    align-items: center;
 }
 
 /* Footer */
 .footer {
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
     padding: var(--spacing-medium);
     text-align: center;
-    z-index: 2;
+    z-index: 100;
 }
 
 .footer-logo {
-    max-width: 150px;
-    height: auto;
+    height: 40px;
+    width: auto;
 }
 
-/* Detail Page Styles */
+/* Detail pagina */
 .detail-container {
     max-width: 1200px;
-    margin: 80px auto 100px;
+    margin: 80px auto 0;
     padding: var(--spacing-medium);
-    position: relative;
-    z-index: 1;
 }
 
 .mural-detail {
     background: white;
     border-radius: var(--border-radius);
+    padding: var(--spacing-large);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
 
 .mural-full-image {
     width: 100%;
     height: auto;
-    display: block;
-    max-height: 70vh;
-    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-medium);
+}
+
+.mural-full-image.secondary {
+    margin-bottom: var(--spacing-large);
 }
 
 .mural-info {
-    padding: var(--spacing-large);
+    padding: var(--spacing-medium);
 }
 
 .mural-info h1 {
     color: var(--text-primary);
     font-size: 2rem;
-    margin: 0 0 var(--spacing-medium);
-    font-family: var(--font-family);
+    margin-bottom: var(--spacing-medium);
+    font-weight: 600;
 }
 
 .mural-info p {
     color: var(--text-secondary);
-    margin: var(--spacing-small) 0;
+    font-size: 1.1rem;
     line-height: 1.6;
-    font-family: var(--font-family);
+    margin-bottom: var(--spacing-medium);
 }
 
 .mural-info p:first-of-type {
     color: var(--primary-color);
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
 }

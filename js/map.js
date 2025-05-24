@@ -143,7 +143,7 @@ fetch('./data/heerlen-murals.json')
         }).addTo(map);
 
         const startPopupContent = `
-            <div class="muurschildering-popup">
+            <div class="mural-popup">
                 <img src="${data.startLocation.thumbnail}" alt="Afbeelding van ${data.startLocation.name}">
                 <h3>${data.startLocation.name}</h3>
                 <p>${data.startLocation.address}</p>
@@ -169,7 +169,7 @@ fetch('./data/heerlen-murals.json')
             allMarkers.push(marker);
 
             const popupContent = `
-                <div class="muurschildering-popup">
+                <div class="mural-popup">
                     <img src="${mural.thumbnail}" alt="Afbeelding van ${mural.title}">
                     <h3>${mural.title}</h3>
                     <p>${mural.artist}, ${mural.year}</p>

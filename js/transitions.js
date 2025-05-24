@@ -1,67 +1,60 @@
-$(document).ready(function() {
-    // Voeg transitie stijlen toe
-    if (!$('#transition-styles').length) {
-        $('<style id="transition-styles">')
-            .text(`
-                body {
-                    opacity: 1;
-                    transition: opacity 0.5s ease-in-out;
-                    background-color: #f5f5f5;
-                }
-
-                body.fade-out {
-                    opacity: 0;
-                    background-color: #8c8c8c;
-                }
-
-                body.fade-in {
-                    opacity: 1;
-                    background-color: #f5f5f5;
-                }
-            `)
-            .appendTo('head');
+// Voeg transitie stijlen toe
+const style = document.createElement('style');
+style.textContent = `
+    body {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
     }
+    body.fade-out {
+        opacity: 0;
+    }
+`;
+document.head.appendChild(style);
 
+// Behandel alle interne links
+document.addEventListener('DOMContentLoaded', function() {
     // Behandel alle interne links
-    $(document).on('click', 'a[href^="/"], a[href^="./"], a[href^="route.html"], a[href^="index.html"], a[href^="detail.html"]', function(e) {
-        // Negeer directe links naar afbeeldingen of externe links
-        if ($(this).attr('href').match(/\.(jpg|jpeg|png|gif)$/i) || 
-            $(this).attr('target') === '_blank') {
-            return;
-        }
-
-        e.preventDefault();
-        const href = $(this).attr('href');
-
-        // Fade uit
-        $('body').addClass('fade-out');
-
-        // Navigeer naar nieuwe pagina na fade
-        setTimeout(() => {
-            window.location.href = href;
-        }, 500);
+    document.querySelectorAll('a[href^="route.html"], a[href^="index.html"], a[href^="detail.html"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Negeer directe links naar afbeeldingen of externe links
+            if (this.href.match(/\.(jpg|jpeg|png|gif)$/i) || this.href.startsWith('http')) {
+                return;
+            }
+            
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            
+            // Fade uit
+            document.body.classList.add('fade-out');
+            
+            // Navigeer naar nieuwe pagina na fade
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
+        });
     });
 
     // Behandel terug-knop kliks
-    $(document).on('click', '.terug-knop', function(e) {
-        e.preventDefault();
-        const href = $(this).attr('onclick').match(/'([^']+)'/)[1];
-        
-        // Fade uit
-        $('body').addClass('fade-out');
-
-        // Navigeer naar nieuwe pagina na fade
-        setTimeout(() => {
-            window.location.href = href;
-        }, 500);
+    document.querySelectorAll('.terug-knop').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+            
+            // Fade uit
+            document.body.classList.add('fade-out');
+            
+            // Navigeer naar nieuwe pagina na fade
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
+        });
     });
 
     // Fade in bij het laden van de pagina
-    // Wacht tot de pagina volledig geladen is voordat de fade-in start
-    $(window).on('load', function() {
-        // Wacht even tot alles geladen is
+    window.addEventListener('load', function() {
+        // Wacht tot alle resources geladen zijn
         setTimeout(() => {
-            $('body').addClass('fade-in');
-        }, 1000);
+            document.body.style.opacity = '1';
+        }, 100);
     });
 }); 
