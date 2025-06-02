@@ -67,15 +67,15 @@ html, body {
 .logo {
     display: block;
     max-width: 400px;
-    margin: 0 auto;
-    padding-top: 15vh;
+    margin: 0 auto 2vh auto;
+    padding-top: 5vh;
 }
 
 /* Knoppen */
 .knop-container {
     width: 100%;
     max-width: 300px;
-    margin: 10vh auto;
+    margin: 0 auto;
     padding: 0 var(--spacing-medium);
 }
 
@@ -285,8 +285,10 @@ html, body {
 }
 
 .mural-popup .knop-tekst {
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
 }
 
 /* Footer */
